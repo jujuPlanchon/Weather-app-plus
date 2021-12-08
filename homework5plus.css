@@ -1,0 +1,99 @@
+.weatherapp {
+  max-width: 70%;
+  display: block;
+  border: 1px;
+  background-color: #eff0b4;
+  border-radius: 20px;
+  margin-top: 10%;
+  margin-left: 10%;
+  padding: 10px, 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #7e32b3;
+  font-size: 50px;
+  padding-top: 30px;
+  padding-left: 15px;
+}
+ul {
+  list-style-type: none;
+  text-align: center;
+  color: #7e32b3;
+  font-size: 20px;
+  padding-left: 5px;
+}
+h3 {
+  text-align: center;
+}
+.floatLeft {
+  line-break: 2px;
+  text-align: center;
+  padding-left: 5px;
+}
+
+.all {
+  background-color: #ffc154;
+  text-align: center;
+  font-family: M PLUS 2, sans-serif;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.searchbar {
+  width: 75%;
+  border-radius: 10px;
+  border-color: #7e32b3;
+  margin-left: 2px;
+  margin-bottom: 5px;
+}
+.submitSearch {
+  color: #ffc154;
+  background-color: #7e32b3;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+.submitSearch:hover {
+  color: #7e32b3;
+  background-color: #ffc154;
+  cursor: pointer;
+}
+.tempNow {
+  color: #ffc154;
+  background-color: #7e32b3;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+.tempNow:hover {
+  color: #7e32b3;
+  background-color: #ffc154;
+  cursor: pointer;
+}
+.week {
+  padding: 20px;
+}
+.days {
+  color: #7e32b3;
+  text-align: center;
+  font-size: 25px;
+}
+.temperature {
+  color: #7e32b3;
+  font-size: 30px;
+}
+.number {
+  font-size: 20px;
+}
+.celsius {
+  color: #7e32b3;
+  text-decoration: none;
+}
+.fahrenheit {
+  color: #7e32b3;
+  text-decoration: none;
+}
+.sun {
+  font-size: 30px;
+  color: #7e32b3;
+}
