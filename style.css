@@ -97,3 +97,12 @@ h3 {
   font-size: 30px;
   color: #7e32b3;
 }
+.source {
+  text-align: center;
+  color: #7e32b3;
+  padding-bottom: 5px;
+}
+.repository {
+  color: #7e32b3;
+  text-decoration: none;
+}
