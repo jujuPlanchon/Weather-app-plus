@@ -41,6 +41,9 @@ h3 {
   display: block;
   margin: 0 auto;
 }
+.description {
+  text-transform: capitalize;
+}
 .searchbar {
   width: 75%;
   border-radius: 10px;
