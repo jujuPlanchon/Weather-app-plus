@@ -35,23 +35,59 @@ if (minutes < 10) {
 hoursNow.innerHTML = `${hours}:${minutes}`;
 
 function showTemperature(response) {
-  let h1 = document.querySelector("h1");
+  let h1 = document.querySelector("#city");
   h1.innerHTML = response.data.name;
   let idTemperature = document.querySelector("#temperature");
-  idTemperature.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  idTemperature.innerHTML = Math.round(celsiusTemperature);
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-function okSubmit(event) {
+function showFahrenheit(event) {
   event.preventDefault();
-  let city = document.querySelector("#search-bar").value;
+
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  let idTemperature = document.querySelector("#temperature");
+  idTemperature.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let celsiusTemperature = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+function showCelsius(event) {
+  event.preventDefault();
+
+  let idTemperature = document.querySelector("#temperature");
+  idTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
+
+function search(city) {
   let apiKey = "f9b144c081d097692afbbd4e19bdc435";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
 
+function okSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#search-bar");
+  search(city.value);
+}
+
 let formSearch = document.querySelector("#search-city");
 formSearch.addEventListener("submit", okSubmit);
+search("Genève");
 
 function currentPosition(position) {
   let apiKey = "f9b144c081d097692afbbd4e19bdc435";
@@ -64,5 +100,6 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(currentPosition);
 }
-let currentLocationButton = document.querySelector("#temp-now");
-currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let locationBtn = document.querySelector("#temp-now");
+locationBtn.addEventListener("click", getCurrentLocation);
