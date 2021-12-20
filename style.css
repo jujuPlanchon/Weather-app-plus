@@ -1,13 +1,9 @@
 .weatherapp {
-  max-width: 70%;
-  display: block;
   border: 1px;
   background-color: #eff0b4;
   border-radius: 20px;
   margin-top: 10%;
   margin-left: 10%;
-  padding: 10px, 30px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0.1);
 }
 
 h1 {
@@ -37,18 +33,19 @@ h3 {
 }
 
 .all {
+  max-width: 600px;
   background-color: #ffc154;
   text-align: center;
   font-family: M PLUS 2, sans-serif;
   border-radius: 20px;
-  display: block;
-  margin: 0 auto;
+
+  margin: 30px auto;
 }
 .description {
   text-transform: capitalize;
 }
 .searchbar {
-  width: 75%;
+  width: 60%;
   border-radius: 10px;
   border-color: #7e32b3;
   margin-left: 2px;
