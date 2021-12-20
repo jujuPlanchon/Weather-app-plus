@@ -117,7 +117,7 @@ fahrenheitLink.addEventListener("click", showFahrenheit);
 function showCelsius(event) {
   event.preventDefault();
 
-  let idTemperature = document.querySelector("#temp");
+  let idTemperature = document.querySelector("#temperature");
   idTemperature.innerHTML = Math.round(celsiusTemperature);
 }
 
