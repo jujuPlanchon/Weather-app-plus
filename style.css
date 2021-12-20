@@ -3,6 +3,7 @@
   background-color: #eff0b4;
   border-radius: 20px;
   margin-top: 10%;
+  font-family: M PLUS 2, sans-serif;
 }
 
 h1 {
@@ -35,7 +36,7 @@ h3 {
   max-width: 600px;
   background-color: #ffc154;
   text-align: center;
-  font-family: M PLUS 2, sans-serif;
+
   border-radius: 20px;
 
   margin: 30px auto;
