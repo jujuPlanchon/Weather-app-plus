@@ -26,6 +26,10 @@ ul {
 }
 h3 {
   text-align: center;
+  
+}
+.temperature {
+  color: #7e32b3;
 }
 .floatLeft {
   line-break: 2px;
@@ -73,13 +77,22 @@ h3 {
   background-color: #ffc154;
   cursor: pointer;
 }
-.week {
-  padding: 20px;
-}
-.days {
-  color: #7e32b3;
+.dailyforecast {
+  margin-top: 20px;
   text-align: center;
-  font-size: 25px;
+}
+.forecast-date {
+  font-size: 16px;
+  color: #7e32b3;
+}
+.forecast-temp {
+  font-size: 13px;
+  color: #7e32b3;
+}
+.min-temp {
+  opacity: 0.6;
+}
+
 }
 .temperature {
   color: #7e32b3;
@@ -103,7 +116,7 @@ h3 {
 .source {
   text-align: center;
   color: #7e32b3;
-  padding-bottom: 5px;
+  padding: 10px;
 }
 .repository {
   color: #7e32b3;
